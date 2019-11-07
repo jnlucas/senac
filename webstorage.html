@@ -1,6 +1,6 @@
 <?php include "configuracao.php" ?>
 <!DOCTYPE html>
-<html manifest="exemplo.appcache">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,18 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <style>
+            canvas {
+                background: #ffffff;
+                cursor: pointer;
+                margin-left: 10px;
+                margin-top: 10px;
+                -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+                -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+                box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+            }
+        </style>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-yellow-light layout-top-nav">
@@ -66,24 +78,23 @@
       <section class="content  align-self-baseline">
 
         <div class="row">
-          <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
+          <div class="col-xs-12 col-md-6 col-sm-6">
+              <div class=" form-group">
+                <label for="form">Local Storage</label>
+                <textarea  name="localstorage"   class="form-control localstorage" value=""></textarea>
+              </div>
           </div>
-          <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
-          </div>
-          <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
-            <p>responsive web devices</p>
+          <div class="col-xs-12 col-md-6 col-sm-6">
+              <div class=" form-group">
+                <label for="form">Session Storage</label>
+                <textarea  name="sessionstorage"  class="form-control sessionstorage" value=""></textarea>
+              </div>
           </div>
 
+
         </div>
+
+
         <!-- /.box -->
       </section>
       <!-- /.content -->
@@ -112,8 +123,21 @@ footer
 
 
 <script>
-
-
+$(function(){
+ //salvando localStorage
+  $("body").on('keyup','.localstorage',function(){
+      localStorage.setItem('localstorage',$(this).val());
+  })
+  // salvando sessionStorage
+  $("body").on('keyup','.sessionstorage',function(){
+      sessionStorage.setItem('sessionstorage',$(this).val());
+  })
+// Listando localStorage
+  $('.localstorage').val(localStorage.getItem('localstorage'));
+  $('.sessionstorage').val(sessionStorage.getItem('sessionstorage'));
+})
 </script>
+
+
 </body>
 </html>

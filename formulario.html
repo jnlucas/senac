@@ -1,6 +1,6 @@
 <?php include "configuracao.php" ?>
 <!DOCTYPE html>
-<html manifest="exemplo.appcache">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,26 +64,32 @@
 
       <!-- Main content -->
       <section class="content  align-self-baseline">
-
+        <form>
         <div class="row">
           <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
+            <div class=" form-group">
+              <label for="form">Telefone</label>
+              <input type="tel" name="telefone" pattern="[-0-9]+" required class="form-control" value="">
+            </div>
           </div>
           <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
-          </div>
-          <div class="col-xs-12 col-md-4 col-sm-6">
-            <a href="#" class="thumbnail">
-              <img src="assets/fotos/senac.jpg" alt="senac">
-            </a>
-            <p>responsive web devices</p>
+            <div class=" form-group">
+              <label for="form">Email</label>
+              <input type="email" name="email" autocomplete="on" required placeholder="senac@senac.com" class="form-control" value="">
+            </div>
           </div>
 
+          <div class="col-xs-12 col-md-4 col-sm-6">
+            <div class=" form-group">
+              <label for="form">Hora</label>
+              <input type="time" name="time" class="form-control" value="">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" name="button">Enviar</button>
         </div>
+
+        </form>
         <!-- /.box -->
       </section>
       <!-- /.content -->
