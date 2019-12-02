@@ -1,6 +1,5 @@
-<?php include "configuracao.php" ?>
 <!DOCTYPE html>
-<html manifest="exemplo.appcache">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,19 +23,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Product",
-    "name" : "Senac EAD",
-    "image" : "http://senac.14mob.com/assets/fotos/senac.jpg",
-    "description" : "responsive web devices",
-    "offers" : {
-      "@type" : "Offer",
-      "price" : "Cursos"
-    }
-  }
-  </script>
+  
 
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
