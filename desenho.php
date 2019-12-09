@@ -121,38 +121,29 @@ footer
 <script>
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
-var desenhando = false;
+var estouDesenhando = false;
 var correcaoPontoZero = 80;
 
 $("body").on("mousedown","#myCanvas",function(ev){
-
-
-
   context.moveTo(ev.clientX - correcaoPontoZero,ev.clientY - correcaoPontoZero);
-  desenhando = true;
+  estouDesenhando = true;
 })
 
 $("body").on("mouseup","#myCanvas",function(ev){
-
-  desenhando = false;
+  estouDesenhando = false;
 })
 
-
 $("body").on("mousemove","#myCanvas",function(ev){
-
-  if(desenhando){
+  if(estouDesenhando){
     context.lineTo(ev.clientX - correcaoPontoZero,ev.clientY - correcaoPontoZero);
     context.stroke();
-    desenhando = true;
-
+    estouDesenhando = true;
   }
 })
 
 $("body").on("click",".limpar",function(){
-
   context.clearRect(0,0,400,400)
   context.beginPath();
-
 })
 
 
