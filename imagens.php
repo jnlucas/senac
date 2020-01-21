@@ -23,17 +23,8 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-  <style>
-            canvas {
-                background: #ffffff;
-                cursor: pointer;
-                margin-left: 10px;
-                margin-top: 10px;
-                -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-                -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-                box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-            }
-        </style>
+  
+
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-yellow-light layout-top-nav">
@@ -78,29 +69,23 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-4 col-sm-6">
+            <a href="#" class="thumbnail">
+              
+              <img srcset="senac-480w.jpg 480w,
+             senac-768w.jpg 768w,
+             senac-1080w.jpg 1080w"
+     
+     sizes="(max-width: 480px) 440px,
+            (max-width: 768px) 740px,
+            1080px"
+     src="senac-1080w.jpg" alt="Senac">
 
-            <p
-              id="p1"
-              draggable="true"
-              ondragend="end(event)"
-              ondragstart="dragstart(event);" >
-                Este elemento é arrastável.
-            </p>
-            <div
-              id="target"
-              ondrop="drop(event);"
-              ondragover="dragover(event);"
-              ondragleave="fora(event)"
-              style="border: solid red 1px; width:200px;height:200px"  >
-                Zona de Soltura (Drop Zone)
-            </div>
 
+            </a>
           </div>
-
+          
 
         </div>
-
-
         <!-- /.box -->
       </section>
       <!-- /.content -->
@@ -130,31 +115,7 @@ footer
 
 <script>
 
-function drop(event){
-  console.log("soltando");
-}
-function dragover(event){
-  console.log("solto");
-  $('#p1').css('color','green')
-  $('#p1').html('elemento DENTRO da área de soltura')
-}
-function dragstart(ev){
-  ev.dataTransfer.setData('text/plain', null);
-  console.log("iniciando");
-  $('#p1').css('color','blue')
-}
-function fora(event){
-  console.log("fora");
-  $('#p1').css('color','red')
-  $('#p1').html('elemento FORA da área de soltura')
-}
-function end(event){
-  console.log("fim");
-  $('#p1').css('color','black')
-  $('#p1').html('Este elemento é arrastável')
-}
+
 </script>
-
-
 </body>
 </html>

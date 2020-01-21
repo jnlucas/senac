@@ -86,6 +86,9 @@
               ondragstart="dragstart(event);" >
                 Este elemento é arrastável.
             </p>
+
+
+
             <div
               id="target"
               ondrop="drop(event);"
@@ -143,11 +146,18 @@ function dragstart(ev){
   console.log("iniciando");
   $('#p1').css('color','blue')
 }
+
+
+
 function fora(event){
   console.log("fora");
   $('#p1').css('color','red')
   $('#p1').html('elemento FORA da área de soltura')
 }
+
+
+
+
 function end(event){
   console.log("fim");
   $('#p1').css('color','black')

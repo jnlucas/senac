@@ -1,4 +1,3 @@
-<?php include "configuracao.php" ?>
 <!DOCTYPE html>
 <html>
 <head>

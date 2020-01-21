@@ -1,4 +1,3 @@
-<?php include "configuracao.php" ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,6 +84,8 @@
               <input type="time" name="time" class="form-control" value="">
             </div>
           </div>
+
+          
 
           <button type="submit" class="btn btn-primary" name="button">Enviar</button>
         </div>
