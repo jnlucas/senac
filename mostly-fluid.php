@@ -32,7 +32,7 @@ body {
     width: 50%;
   }
 }
-@media (min-width: 980px) {
+@  (min-width: 980px) {
   .col1 {
     width: 60%;
   }

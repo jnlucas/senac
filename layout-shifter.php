@@ -20,6 +20,33 @@ body {
 }
 
 
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.col1, .col2, .col3, .col4 {
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .col1 {
+    width: 25%;
+  }
+  .col2 {
+    width: 75%;
+  }
+}
+@media (min-width: 980px) {
+  .container {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
 
 </style>
 <body>
