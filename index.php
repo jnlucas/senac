@@ -115,6 +115,16 @@ footer
 
 <script>
 
+$(function(){
+
+
+  $("body").on("click","img",function(){
+
+    $(this).fadeOut('fast');
+  })
+
+
+})
 
 </script>
 </body>
